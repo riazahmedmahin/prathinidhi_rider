@@ -33,11 +33,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   alignment: Alignment.topLeft,
                   child: Text("Pratinidhi rider app",
                       style: Theme.of(context).textTheme.titleLarge)),
-              SizedBox(height: 20,),
-              container(text: 'Continue as a rider', boxcolor: Colors.grey.shade300, textcolor: Colors.black,),
-              SizedBox(height: 15,),
-              container(text: "Become a rider", boxcolor: AppColors.primaryColor, textcolor: Colors.white)
-
+              SizedBox(
+                height: 20,
+              ),
+              container(
+                text: 'Continue as a rider',
+                boxcolor: Colors.grey.shade300,
+                textcolor: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              container(
+                  text: "Become a rider",
+                  boxcolor: AppColors.primaryColor,
+                  textcolor: Colors.white)
             ],
           ),
         ),
@@ -47,12 +57,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 }
 
 class container extends StatelessWidget {
-   container({
-    super.key,required this.text,required this.boxcolor , required this.textcolor
-  });
-   final Color textcolor;
-   final String text;
-   final Color boxcolor;
+  container(
+      {super.key,
+      required this.text,
+      required this.boxcolor,
+      required this.textcolor});
+  final Color textcolor;
+  final String text;
+  final Color boxcolor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -62,7 +74,12 @@ class container extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: boxcolor,
       ),
-      child: Center(child: Text(text,style: TextStyle(fontSize: 22,fontWeight: FontWeight.w600,color: textcolor),)),
+      child: Center(
+          child: Text(
+        text,
+        style: TextStyle(
+            fontSize: 22, fontWeight: FontWeight.w600, color: textcolor),
+      )),
     );
   }
 }
