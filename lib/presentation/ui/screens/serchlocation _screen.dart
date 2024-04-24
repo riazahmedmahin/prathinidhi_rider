@@ -46,7 +46,7 @@ class _Search_locationScreenState extends State<Search_locationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search Location Demo'),
+
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
