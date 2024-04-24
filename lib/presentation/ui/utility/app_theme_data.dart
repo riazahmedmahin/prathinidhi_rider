@@ -23,19 +23,19 @@ class AppThemeData {
       ),
       inputDecorationTheme: InputDecorationTheme(
         labelStyle: TextStyle(color: Colors.grey.shade400),
-        hintStyle: TextStyle(color: Colors.grey.shade400),
+        hintStyle: TextStyle(color: Colors.grey.shade500),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         border: const OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.primaryColor, width: 1.5),
+          borderSide: BorderSide(color: Colors.transparent, width: 1.5),
         ),
         enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.primaryColor, width: 1.5),
+          borderSide: BorderSide(color: Colors.transparent, width: 1.5),
         ),
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(width: 1.5, color: AppColors.primaryColor),
+          borderSide: BorderSide(width: 1.5, color:Colors.transparent),
         ),
         errorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(width: 1.5, color: Colors.red),
+          borderSide: BorderSide(width: 1.5, color: Colors.transparent),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(

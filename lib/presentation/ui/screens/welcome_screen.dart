@@ -1,7 +1,12 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/login_screen.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/serchlocation%20_screen.dart';
+
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
+import 'package:prathinidhi_rider/presentation/ui/widgets/textbutton.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -36,50 +41,32 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               SizedBox(
                 height: 20,
               ),
-              container(
-                text: 'Continue as a rider',
-                boxcolor: Colors.grey.shade300,
-                textcolor: Colors.black,
-              ),
+
+
+
+              CustomTextButton(onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+                color: Colors.grey.shade300, text: 'Continue as a rider', txtcolor: Colors.black,),
               SizedBox(
                 height: 15,
               ),
-              container(
-                  text: "Become a rider",
-                  boxcolor: AppColors.primaryColor,
-                  textcolor: Colors.white)
+              CustomTextButton(onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Search_locationScreen()),
+                );
+              },
+                color: AppColors.primaryColor, text: 'Become a rider', txtcolor: Colors.white,),
+
+
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class container extends StatelessWidget {
-  container(
-      {super.key,
-      required this.text,
-      required this.boxcolor,
-      required this.textcolor});
-  final Color textcolor;
-  final String text;
-  final Color boxcolor;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: 500,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: boxcolor,
-      ),
-      child: Center(
-          child: Text(
-        text,
-        style: TextStyle(
-            fontSize: 22, fontWeight: FontWeight.w600, color: textcolor),
-      )),
     );
   }
 }
