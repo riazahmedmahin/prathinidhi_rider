@@ -10,7 +10,7 @@ class ConfrimLoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      //appBar: AppBar(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -33,3 +33,7 @@ class ConfrimLoginScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+

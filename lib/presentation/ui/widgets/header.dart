@@ -13,25 +13,30 @@ class header extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(8.0),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15)),
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16),bottomRight: Radius.circular(16)),
           color: AppColors.primaryColor
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
         children: [
-          Text(
-            'Become a Rider',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 18.0,
-            ),
-          ),
-          IconButton(
-            icon: Icon(Icons.close, color: Colors.white),
-            onPressed: () {
-              // Handle close action
-            },
+          SizedBox(height: 40,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Become a Rider',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                ),
+              ),
+              IconButton(
+                icon: Icon(Icons.close, color: Colors.white),
+                onPressed: () {
+                  // Handle close action
+                },
+              ),
+            ],
           ),
         ],
       ),

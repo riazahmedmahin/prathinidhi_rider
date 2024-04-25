@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/personal_info_screens.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
 
@@ -45,9 +46,7 @@ class _Search_locationScreenState extends State<Search_locationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
 
-      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -94,6 +93,7 @@ class _Search_locationScreenState extends State<Search_locationScreen> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: CustomTextButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalInfoScreen()));
 
             }, text: 'Next', txtcolor: Colors.white, color: AppColors.primaryColor,),
           ),
