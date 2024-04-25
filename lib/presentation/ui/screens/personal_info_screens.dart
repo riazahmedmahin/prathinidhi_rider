@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/delivery_Info_screen.dart';
+import 'package:prathinidhi_rider/presentation/ui/widgets/geid_view.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
 
@@ -35,7 +36,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                   height: 20,
                 ),
                 TextField(
-                  decoration: InputDecoration(hintText: "Phone number"),
+                  decoration: InputDecoration(hintText: "Your Name"),
                 ),
                 SizedBox(
                   height: 10,
@@ -58,7 +59,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                 ),
                 Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Your Age 18 or More than?")),
+                    child: Text("Your Age 18 or More than?",style: TextStyle(fontSize: 15),)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
@@ -71,7 +72,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                         });
                       },
                     ),
-                    Text('Yes'),
+                    Text('Yes',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600),),
                     Radio(
                       value: 'No',
                       groupValue: selectedAnswer,
@@ -81,14 +82,16 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                         });
                       },
                     ),
-                    Text('No'),
+                    Text('No',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),),
                   ],
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 CustomTextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>deliveryInfoScreen()));
+                  },
                   text: 'Next',
                   color: AppColors.primaryColor,
                   txtcolor: Colors.white,

@@ -20,13 +20,9 @@ class ConfrimLoginScreen extends StatelessWidget {
           SizedBox(height: 300,),
           Text(" Your Application Under Review.",style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
           Text("Contact to our office with full documents",style: Theme.of(context).textTheme.titleSmall,),
-          SizedBox(height: 20,),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: CustomTextButton(onPressed: () {  }, color: AppColors.primaryColor, text: 'Contact our Support team', txtcolor: Colors.white,),
-          )
-
-
+          SizedBox(height: 10,),
+          CustomTextButton(onPressed: () {  }, color: AppColors.primaryColor, text: 'Contact our Support team', txtcolor: Colors.white,),
+          SizedBox(height: 10,)
 
         ],
       ),
