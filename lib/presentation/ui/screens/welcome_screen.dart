@@ -1,10 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/login_screen.dart';
-import 'package:prathinidhi_rider/presentation/ui/screens/serchlocation%20_screen.dart';
-
+import 'package:prathinidhi_rider/presentation/ui/screens/searchLocation%20_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/textbutton.dart';
 
@@ -41,28 +37,32 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               SizedBox(
                 height: 20,
               ),
-
-
-
-              CustomTextButton(onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                );
-              },
-                color: Colors.grey.shade300, text: 'Continue as a rider', txtcolor: Colors.black,),
+              CustomTextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
+                color: Colors.grey.shade300,
+                text: 'Continue as a rider',
+                txtcolor: Colors.black,
+              ),
               SizedBox(
                 height: 15,
               ),
-              CustomTextButton(onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Search_locationScreen()),
-                );
-              },
-                color: AppColors.primaryColor, text: 'Become a rider', txtcolor: Colors.white,),
-
-
+              CustomTextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Search_locationScreen()),
+                  );
+                },
+                color: AppColors.primaryColor,
+                text: 'Become a rider',
+                txtcolor: Colors.white,
+              ),
             ],
           ),
         ),

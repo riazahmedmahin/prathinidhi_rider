@@ -16,13 +16,20 @@ class ConfrimLoginScreen extends StatelessWidget {
         children: [
           //SizedBox(height: 10,),
           header(),
-          Text("lotie"),
-          SizedBox(height: 300,),
-          Text(" Your Application Under Review.",style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
-          Text("Contact to our office with full documents",style: Theme.of(context).textTheme.titleSmall,),
-          SizedBox(height: 10,),
-          CustomTextButton(onPressed: () {  }, color: AppColors.primaryColor, text: 'Contact our Support team', txtcolor: Colors.white,),
-          SizedBox(height: 10,)
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text("lotie"),
+                SizedBox(height: 300,),
+                Text(" Your Application Under Review.",style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
+                Text("Contact to our office with full documents",style: Theme.of(context).textTheme.titleSmall,),
+                SizedBox(height: 10,),
+                CustomTextButton(onPressed: () {  }, color: AppColors.primaryColor, text: 'Contact our Support team', txtcolor: Colors.white,),
+                SizedBox(height: 10,)
+              ],
+            ),
+          ),
 
         ],
       ),

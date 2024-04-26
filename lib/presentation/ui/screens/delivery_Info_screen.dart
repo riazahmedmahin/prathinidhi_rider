@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
-import 'package:prathinidhi_rider/presentation/ui/widgets/geid_view.dart';
+import 'package:prathinidhi_rider/presentation/ui/widgets/grid_view.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/textbutton.dart';
 
