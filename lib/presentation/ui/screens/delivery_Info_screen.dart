@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/application_submitted_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/grid_view.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
@@ -29,7 +30,9 @@ class _deliveryInfoScreenState extends State<deliveryInfoScreen> {
           geid_view(),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: CustomTextButton(onPressed: () {  }, text: 'Next', color: AppColors.primaryColor, txtcolor: Colors.white,),
+            child: CustomTextButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ApplicationSubmittedScreen()));
+            }, text: 'Next', color: AppColors.primaryColor, txtcolor: Colors.white,),
           )
         ],
       ),

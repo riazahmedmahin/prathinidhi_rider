@@ -12,6 +12,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+  bool _obscureText = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,11 +37,22 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 10,),
               TextField(
-                obscureText: true,
+                obscureText: _obscureText,
                 obscuringCharacter: '*',
                 decoration: InputDecoration(
                     hintText: "Password",
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
+                    child: Icon(
+                      _obscureText ? Icons.visibility : Icons.visibility_off,
+                    ),
+                  )
                 ),
+
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

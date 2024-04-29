@@ -14,7 +14,9 @@ class PersonalInfoScreen extends StatefulWidget {
 }
 
 class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
+
   String? selectedAnswer = 'Yes';
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +51,20 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                     height: 10,
                   ),
                   TextField(
-                    obscureText: true,
+                    obscureText: _obscureText,
                     obscuringCharacter: '*',
                     decoration: InputDecoration(
                       hintText: "Password",
+                        suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              _obscureText = !_obscureText;
+                            });
+                          },
+                          child: Icon(
+                            _obscureText ? Icons.visibility : Icons.visibility_off,
+                          ),
+                        )
                     ),
                   ),
                   SizedBox(
