@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/dashboard_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
@@ -85,10 +86,7 @@ class ApplicationSubmittedScreen extends StatelessWidget {
                   ),
                   CustomTextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => dashBoardScreen()));
+                      Get.to(dashBoardScreen());
                     },
                     color: AppColors.primaryColor,
                     text: 'Done',

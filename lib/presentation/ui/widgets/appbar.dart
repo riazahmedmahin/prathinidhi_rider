@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/profile_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 
-
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight); // Set the preferred height
+  Size get preferredSize =>
+      Size.fromHeight(kToolbarHeight); // Set the preferred height
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           padding: const EdgeInsets.only(right: 12),
           child: IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProfileScreen()),
-              );
+              Get.to(ProfileScreen());
             },
             icon: Icon(Icons.menu, color: Colors.white, size: 30),
           ),

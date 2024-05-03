@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/dashboard_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/appbar.dart';
@@ -57,7 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.redAccent,
         onPressed: () => {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>dashBoardScreen()))
+          Get.to(dashBoardScreen()),
         }, // Example: Open notifications screen
         child: Icon(Icons.home_filled,color: Colors.white,),
         elevation: 2.0,

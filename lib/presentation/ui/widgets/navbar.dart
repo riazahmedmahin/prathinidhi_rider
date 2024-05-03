@@ -16,8 +16,7 @@ class navbuttom extends StatelessWidget {
         height: 60.0, // Height of the bottom navigation bar
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-          ],
+          children: <Widget>[],
         ),
       ),
     );

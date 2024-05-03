@@ -22,7 +22,8 @@ class _geid_viewState extends State<geid_view> {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.5, // Adjust the height as needed
+        height: MediaQuery.of(context).size.height *
+            0.5, // Adjust the height as needed
         child: GridView.count(
           crossAxisCount: 2,
           crossAxisSpacing: 10.0,
@@ -47,9 +48,8 @@ class _geid_viewState extends State<geid_view> {
                         Icon(
                           choices[index].icon,
                           size: 50.0,
-                          color: isSelected[index]
-                              ? Colors.white
-                              : Colors.black87,
+                          color:
+                              isSelected[index] ? Colors.white : Colors.black87,
                         ),
                         SizedBox(height: 10),
                         Text(

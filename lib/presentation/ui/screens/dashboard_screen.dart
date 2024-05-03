@@ -75,34 +75,6 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
     );
   }
 
-  // AppBar get appbar {
-  //   return AppBar(
-  //     backgroundColor: AppColors.primaryColor,
-  //     title: Text("প্রতিনিধি",style: TextStyle(color: Colors.white),),
-  //     centerTitle: true,
-  //     actions: [
-  //       Padding(
-  //         padding: const EdgeInsets.only(right: 12,),
-  //         child: IconButton(onPressed: (){
-  //           Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileScreen()));
-  //         }, icon: Icon(Icons.menu,color: Colors.white,size: 30,))
-  //       )
-  //     ],
-  //     leading: CircleAvatar(
-  //       child: Icon(Icons.person),
-  //     ),
-  //     shape: RoundedRectangleBorder(
-  //       borderRadius: BorderRadius.only(
-  //         bottomRight: Radius.circular(18),
-  //             bottomLeft: Radius.circular(18)
-  //       )
-  //     ),
-  //     bottom: PreferredSize(
-  //       preferredSize: Size.fromHeight(15.0), // Set your custom height here
-  //       child: Container(),
-  //     ),
-  //   );
-  // }
 }
 
 

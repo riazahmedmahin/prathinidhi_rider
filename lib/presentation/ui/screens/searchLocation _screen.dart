@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/personal_info_screens.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
@@ -102,7 +103,7 @@ class _Search_locationScreenState extends State<Search_locationScreen> {
               padding: const EdgeInsets.all(10.0),
               child: CustomTextButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalInfoScreen()));
+                  Get.to(PersonalInfoScreen());
                 },
                 text: 'Next',
                 txtcolor: Colors.white,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:prathinidhi_rider/presentation/ui/screens/welcome_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
@@ -20,7 +21,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void moveToNextScreen() async {
     await Future.delayed(const Duration(seconds: 1),);
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>WelcomeScreen()));
+    Get.offAll(WelcomeScreen());
+
   }
 
 

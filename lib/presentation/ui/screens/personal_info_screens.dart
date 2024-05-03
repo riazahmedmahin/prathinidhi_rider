@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/delivery_Info_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/grid_view.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
@@ -103,7 +104,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                   ),
                   CustomTextButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>deliveryInfoScreen()));
+                      Get.to(deliveryInfoScreen());
                     },
                     text: 'Next',
                     color: AppColors.primaryColor,

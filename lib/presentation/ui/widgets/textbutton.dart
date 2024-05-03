@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import '../utility/app_color.dart';
 
 class CustomTextButton extends StatelessWidget {
-  CustomTextButton({
-    required this.onPressed,required this.text,required this.color,required this.txtcolor
-  });
+  CustomTextButton(
+      {required this.onPressed,
+      required this.text,
+      required this.color,
+      required this.txtcolor});
 
   final VoidCallback onPressed;
   final String text;

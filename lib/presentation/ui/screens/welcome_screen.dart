@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/login_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/searchLocation%20_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
@@ -49,15 +50,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 txtcolor: Colors.black,
               ),
               SizedBox(
-                height: 15,
+                height: 5,
               ),
               CustomTextButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Search_locationScreen()),
-                  );
+                  Get.to(Search_locationScreen());
                 },
                 color: AppColors.primaryColor,
                 text: 'Become a rider',

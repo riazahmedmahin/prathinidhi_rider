@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/dashboard_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
@@ -27,7 +28,7 @@ class ConfrimLoginScreen extends StatelessWidget {
                 Text("Contact to our office with full documents",style: Theme.of(context).textTheme.titleSmall,),
                 SizedBox(height: 10,),
                 CustomTextButton(onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>dashBoardScreen()));
+                  Get.to(dashBoardScreen());
                 }, color: AppColors.primaryColor, text: 'Contact our Support team', txtcolor: Colors.white,),
                 SizedBox(height: 10,)
               ],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Cashcard extends StatelessWidget {
   const Cashcard({
     super.key,
@@ -13,8 +12,7 @@ class Cashcard extends StatelessWidget {
       width: 600,
       decoration: BoxDecoration(
           color: Colors.grey,
-          borderRadius: BorderRadius.all(Radius.circular(12))
-      ),
+          borderRadius: BorderRadius.all(Radius.circular(12))),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Row(
@@ -22,12 +20,21 @@ class Cashcard extends StatelessWidget {
           children: [
             Column(
               children: [
-                SizedBox(height: 40,),
-                Text(" Pratinidhi Cash",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-                Text("00 BDT",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold))
+                SizedBox(
+                  height: 40,
+                ),
+                Text(
+                  " Pratinidhi Cash",
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                ),
+                Text("00 BDT",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold))
               ],
             ),
-            Icon(Icons.add_card,size: 50,),
+            Icon(
+              Icons.add_card,
+              size: 50,
+            ),
           ],
         ),
       ),
