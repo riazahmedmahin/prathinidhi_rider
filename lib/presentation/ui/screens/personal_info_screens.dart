@@ -62,7 +62,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                             });
                           },
                           child: Icon(
-                            _obscureText ? Icons.visibility : Icons.visibility_off,
+                            _obscureText ? Icons.visibility_off : Icons.visibility,
                           ),
                         )
                     ),

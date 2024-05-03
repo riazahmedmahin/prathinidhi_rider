@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:prathinidhi_rider/presentation/ui/screens/welcome_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 

@@ -1,7 +1,9 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
+import 'package:prathinidhi_rider/presentation/ui/widgets/appbar.dart';
+import 'package:prathinidhi_rider/presentation/ui/widgets/navbar.dart';
+import 'package:prathinidhi_rider/presentation/ui/widgets/cashcard.dart';
 class dashBoardScreen extends StatefulWidget {
   const dashBoardScreen({super.key});
 
@@ -13,13 +15,15 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(),
+      bottomNavigationBar: navbuttom(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Center(
             child: Column(
               children: [
-                SizedBox(height: 50,),
+                SizedBox(height: 10,),
                 Container(
                   height: 40,
                   width: 400,
@@ -32,35 +36,12 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
                       child: Text(" Notice : In this section a notice appear for all ride")),
                 ),
                 SizedBox(height: 20,),
-                Container(
-                  height: 150,
-                  width: 600,
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.all(Radius.circular(12))
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            SizedBox(height: 40,),
-                            Text(" Pratinidhi Cash",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-                            Text("00 BDT",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold))
-                          ],
-                        ),
-                        Icon(Icons.add_card,size: 50,),
-                      ],
-                    ),
-                  ),
-                ),
+                Cashcard(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(width: 50,),
-                    TextButton(onPressed: (){},child: Text("Withdraw ",style: TextStyle(fontWeight: FontWeight.w800,color: AppColors.primaryColor,fontSize: 22),),)
+                    TextButton(onPressed: (){},child: Text("Withdraw ",style: TextStyle(fontWeight: FontWeight.w800,color: AppColors.primaryColor,fontSize: 20),),)
                   ],
                 ),
                 SizedBox(height: 10,),
@@ -75,13 +56,53 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
                     color: Colors.grey.shade300,
                     borderRadius: BorderRadius.all(Radius.circular(12))
                   ),
-                )
-          
+                ),
+                //MainBottomNavScreen()
               ],
             ),
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.redAccent,
+        onPressed: () => {
+        }, // Example: Open notifications screen
+        child: Icon(Icons.home_filled,color: Colors.white,),
+        elevation: 2.0,
+        shape: CircleBorder(),// Elevation of the FAB
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
+
+  // AppBar get appbar {
+  //   return AppBar(
+  //     backgroundColor: AppColors.primaryColor,
+  //     title: Text("প্রতিনিধি",style: TextStyle(color: Colors.white),),
+  //     centerTitle: true,
+  //     actions: [
+  //       Padding(
+  //         padding: const EdgeInsets.only(right: 12,),
+  //         child: IconButton(onPressed: (){
+  //           Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileScreen()));
+  //         }, icon: Icon(Icons.menu,color: Colors.white,size: 30,))
+  //       )
+  //     ],
+  //     leading: CircleAvatar(
+  //       child: Icon(Icons.person),
+  //     ),
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.only(
+  //         bottomRight: Radius.circular(18),
+  //             bottomLeft: Radius.circular(18)
+  //       )
+  //     ),
+  //     bottom: PreferredSize(
+  //       preferredSize: Size.fromHeight(15.0), // Set your custom height here
+  //       child: Container(),
+  //     ),
+  //   );
+  // }
 }
+
+
