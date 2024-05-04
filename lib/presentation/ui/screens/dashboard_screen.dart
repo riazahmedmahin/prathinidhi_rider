@@ -23,9 +23,9 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
           child: Center(
             child: Column(
               children: [
-                SizedBox(height: 10,),
+                //SizedBox(height: 10,),
                 Container(
-                  height: 40,
+                  height: 30,
                   width: 400,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade300,
@@ -35,7 +35,14 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
                       alignment: Alignment.center,
                       child: Text(" Notice : In this section a notice appear for all ride")),
                 ),
-                SizedBox(height: 20,),
+                Divider(
+                  height: 40, // Adjust the height of the divider
+                  thickness: 5, // Specify the thickness of the divider
+                  color: Colors.grey.shade300, // Set the color of the divider
+                  indent: 10, // Set the left indent of the divider
+                  endIndent: 10, // Set the right indent of the divider
+                ),
+                //SizedBox(height: 15,),
                 Cashcard(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,10 +51,18 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
                     TextButton(onPressed: (){},child: Text("Withdraw ",style: TextStyle(fontWeight: FontWeight.w800,color: AppColors.primaryColor,fontSize: 20),),)
                   ],
                 ),
-                SizedBox(height: 10,),
+
+                Divider(
+                  //height: 50, // Adjust the height of the divider
+                  thickness: 5, // Specify the thickness of the divider
+                  color: Colors.grey.shade300, // Set the color of the divider
+                  indent: 10, // Set the left indent of the divider
+                  endIndent: 10, // Set the right indent of the divider
+                ),
+                //SizedBox(height: 10,),
                 Align(
                     alignment: Alignment.bottomLeft,
-                    child: Text("Order Status",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),)),
+                    child: Text("Order Status",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w600),)),
                 SizedBox(height: 10,),
                 Container(
                   height: 400,

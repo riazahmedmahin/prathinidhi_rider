@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 
 class Cashcard extends StatelessWidget {
   const Cashcard({
@@ -8,9 +9,13 @@ class Cashcard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 130,
       width: 600,
       decoration: BoxDecoration(
+        gradient: LinearGradient(colors: [
+           AppColors.primaryColor,
+           Colors.grey.shade600,
+        ]),
           color: Colors.grey,
           borderRadius: BorderRadius.all(Radius.circular(12))),
       child: Padding(
@@ -21,7 +26,7 @@ class Cashcard extends StatelessWidget {
             Column(
               children: [
                 SizedBox(
-                  height: 40,
+                  height: 30,
                 ),
                 Text(
                   " Pratinidhi Cash",
@@ -34,6 +39,7 @@ class Cashcard extends StatelessWidget {
             Icon(
               Icons.add_card,
               size: 50,
+              color: Colors.white,
             ),
           ],
         ),
