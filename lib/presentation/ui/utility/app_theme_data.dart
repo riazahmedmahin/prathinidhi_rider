@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 
@@ -27,16 +28,20 @@ class AppThemeData {
         labelStyle: TextStyle(color: Colors.black),
         hintStyle: TextStyle(color: Colors.grey.shade800),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        border: const OutlineInputBorder(
+        border:  OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(color: Colors.white, width: 1.5),
         ),
-        enabledBorder: const OutlineInputBorder(
+        enabledBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(color: Colors.white, width: 1.5),
         ),
-        focusedBorder: const OutlineInputBorder(
+        focusedBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(width: 1.5, color: Colors.white),
         ),
-        errorBorder: const OutlineInputBorder(
+        errorBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide(width: 1.5, color: Colors.white),
         ),
       ),

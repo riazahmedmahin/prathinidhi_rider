@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/order_details_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 
 class ListViewScreen extends StatefulWidget {
@@ -98,12 +100,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
           ListTile(
             title: Text(items[index]['title']!),
             subtitle: Text(items[index]['subtitle']!),
-            trailing: Text(
-              'Status: ${items[index]['status']}',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            trailing: Text(items[index]['status']!),
           ),
           //SizedBox(height: 8.0),
           Row(
@@ -114,10 +111,10 @@ class _ListViewScreenState extends State<ListViewScreen> {
                 width: 150,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Handle button press (e.g., update status)
-                    setState(() {
-                      items[index]['status'] = 'Completed';
-                    });
+                    // // Handle button press (e.g., update status)
+                    // setState(() {
+                    //   items[index]['status'] = 'Completed';
+                    // });
                   },
                   child: Text('Complete'),
                 ),
@@ -127,6 +124,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
                 width: 150,
                 child: ElevatedButton(
                   onPressed: () {
+                    Get.to(OrderDeliveryScreen());
                     // Handle button press (e.g., navigate to details screen)
                   },
                   child: Text('Details'),
