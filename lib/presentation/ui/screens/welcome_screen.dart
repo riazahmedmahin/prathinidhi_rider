@@ -53,6 +53,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               SizedBox(
                 height: 5,
               ),
+
               CustomTextButton(
                 onPressed: () {
                   Get.to(Search_locationScreen());
