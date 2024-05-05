@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/login_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/searchLocation%20_screen.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/tile.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/textbutton.dart';
 
@@ -22,9 +23,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Column(
             children: [
               SizedBox(
-                height: 400,
+                height: 200,
               ),
-              Text("lotie"),
+              Center(child: Image.asset("assets/riderlogo.png")),
               Align(
                   alignment: Alignment.topLeft,
                   child: Text(
@@ -60,6 +61,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 text: 'Become a rider',
                 txtcolor: Colors.white,
               ),
+
             ],
           ),
         ),

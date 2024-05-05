@@ -56,11 +56,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       bottomNavigationBar: navbuttom(),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.grey.shade300,
         onPressed: () => {
           Get.to(dashBoardScreen()),
         }, // Example: Open notifications screen
-        child: Icon(Icons.home_filled,color: Colors.white,),
+        child: Icon(Icons.home_filled,color: Colors.red,),
         elevation: 2.0,
         shape: CircleBorder(),// Elevation of the FAB
       ),

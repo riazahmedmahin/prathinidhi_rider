@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Spacer(),
-            Text("logo"),
+            Image.asset("assets/applogo.png"),
             Text("rider",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w900,color: Colors.white),),
             Spacer(),
             //CircularProgressIndicator(),

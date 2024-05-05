@@ -11,11 +11,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      //toolbarHeight: 55,
       backgroundColor: AppColors.primaryColor,
-      title: Text(
-        "প্রতিনিধি",
-        style: TextStyle(color: Colors.white),
-      ),
+      title: Image.asset("assets/applogo.png",height: 120,width: 70,),
       centerTitle: true,
       actions: [
         Padding(

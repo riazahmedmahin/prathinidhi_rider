@@ -24,16 +24,17 @@ class Cashcard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
                   height: 30,
                 ),
                 Text(
-                  " Pratinidhi Cash",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  "Pratinidhi Cash",
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.white),
                 ),
                 Text("00 BDT",
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold))
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.white))
               ],
             ),
             Icon(

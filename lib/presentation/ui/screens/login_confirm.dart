@@ -22,8 +22,8 @@ class ConfrimLoginScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                Text("lotie"),
-                SizedBox(height: 300,),
+                SizedBox(height: 200,),
+                Center(child: Image.asset("assets/confirm.png")),
                 Text(" Your Application Under Review.",style: TextStyle(fontSize: 23,fontWeight: FontWeight.w700)),
                 Text("Contact to our office with full documents",style: Theme.of(context).textTheme.titleSmall,),
                 SizedBox(height: 10,),

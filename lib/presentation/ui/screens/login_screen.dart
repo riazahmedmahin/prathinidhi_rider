@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 200,),
-              Text("lotie"),
+              Center(child: Image.asset("assets/riderlogo.png")),
               Text("Login",style:Theme.of(context).textTheme.titleLarge,),
               SizedBox(height: 20,),
               TextField(

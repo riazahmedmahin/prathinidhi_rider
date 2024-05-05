@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/personal_info_screens.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
@@ -48,71 +49,72 @@ class _Search_locationScreenState extends State<Search_locationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              header(),
-              Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
+          header(),
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Welcome",
+                  style:
+                      TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                ),
+                Text(
                   'Select the district you are at the moment',
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(16.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Search Location',
-                    prefixIcon: Icon(Icons.search),
-                  ),
-                  onChanged: (value) {
-                    _filterLocations(value);
-                  },
-                ),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: _filteredLocations.length,
-                  itemBuilder: (context, index) {
-                    final location = _filteredLocations[index];
-                    return ListTile(
-                      title: Text(location),
-                      onTap: () {
-                        setState(() {
-                          _selectedLocation = location;
-                          _filteredLocations = [location]; // Only show selected location
-                        });
-                      },
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 20,
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: CustomTextButton(
-                onPressed: () {
-                  Get.to(PersonalInfoScreen());
-                },
-                text: 'Next',
-                txtcolor: Colors.white,
-                color: AppColors.primaryColor,
-              ),
+              ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'Search Location',
+                prefixIcon: Icon(Icons.search),
+              ),
+              onChanged: (value) {
+                _filterLocations(value);
+              },
+            ),
+          ),
+          Expanded(
+            child: ListView.separated(
+              itemCount: _filteredLocations.length,
+              itemBuilder: (context, index) {
+                final location = _filteredLocations[index];
+                return ListTile(
+                  title: Text(location),
+                  onTap: () {
+                    setState(() {
+                      _selectedLocation = location;
+                      _filteredLocations = [
+                        location
+                      ]; // Only show selected location
+                    });
+                    Get.to(PersonalInfoScreen());
+                  },
+                );
+              }, separatorBuilder: (BuildContext context, int index) {
+                return Divider(
+                  thickness: 1,
+                  endIndent: 15,
+                  indent: 15,
+                );
+            },
+            ),
+          ),
+
         ],
       ),
+
     );
   }
 }

@@ -46,10 +46,10 @@ class AppThemeData {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
-          backgroundColor: AppColors.primaryColor,
-          foregroundColor: Colors.white,
+          backgroundColor: Colors.grey.shade300,
+          foregroundColor: Colors.black,
           textStyle: const TextStyle(
-            fontSize: 18,
+            fontSize: 15,
             fontWeight: FontWeight.w500,
             letterSpacing: 0.5,
           ),
