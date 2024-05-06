@@ -41,7 +41,6 @@ class DeliveryConfrimScreen extends StatelessWidget {
                       Get.to(dashBoardScreen());
                     }, text: 'Done', color: AppColors.primaryColor, txtcolor: Colors.white,),
                   )
-
                 ],
               ),
             )

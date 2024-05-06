@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/order_details_screen.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/order_verify.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 
 class ListViewScreen extends StatefulWidget {
@@ -105,7 +106,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
                 width: 150,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(OrderDetailsScreen());
+                    Get.to(OrderVerifyScreen());
                   },
                   child: Text('Accept'),
                 ),
