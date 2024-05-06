@@ -14,7 +14,9 @@ class _OrderVerifyScreenState extends State<OrderVerifyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(icon: Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white,),
+    ontap:(){  Navigator.of(context).pop();
+      }),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:prathinidhi_rider/presentation/ui/screens/login_confirm.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/dashboard_screen.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/pending_screen.dart';
 import 'package:get/get.dart';
 import '../utility/app_color.dart';
 import '../widgets/textbutton.dart';
@@ -64,8 +65,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 30,),
               CustomTextButton(onPressed: () {
-                Get.to(ConfrimLoginScreen());
-              }, text: 'Next', txtcolor: Colors.white, color: AppColors.primaryColor,),
+                Get.to(dashBoardScreen());
+              }, text: 'Log In', txtcolor: Colors.white, color: AppColors.primaryColor,),
             ],
           ),
         ),

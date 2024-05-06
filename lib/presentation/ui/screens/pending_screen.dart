@@ -6,8 +6,8 @@ import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
 
 import '../widgets/textbutton.dart';
 
-class ConfrimLoginScreen extends StatelessWidget {
-  const ConfrimLoginScreen({super.key});
+class PendingScreen extends StatelessWidget {
+  const PendingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

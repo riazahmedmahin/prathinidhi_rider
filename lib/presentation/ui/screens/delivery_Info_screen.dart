@@ -34,7 +34,7 @@ class _deliveryInfoScreenState extends State<deliveryInfoScreen> {
               padding: const EdgeInsets.all(16.0),
               child: CustomTextButton(onPressed: () {
                 Get.to(ApplicationSubmittedScreen());
-              }, text: 'Next', color: AppColors.primaryColor, txtcolor: Colors.white,),
+              }, text: 'Next Step', color: AppColors.primaryColor, txtcolor: Colors.white,),
             )
           ],
         ),

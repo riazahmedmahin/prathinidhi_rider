@@ -17,7 +17,11 @@ class _dashBoardScreenState extends State<dashBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(icon: CircleAvatar(
+        radius:25,
+          child: Icon(Icons.person)),
+
+      ),
       bottomNavigationBar: navbuttom(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/dashboard_screen.dart';
+import 'package:prathinidhi_rider/presentation/ui/screens/pending_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/header.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/textbutton.dart';
@@ -60,30 +61,30 @@ class ApplicationSubmittedScreen extends StatelessWidget {
                     children: [
                       Text(
                           "1. Personal vehicle ( Cycle or Motorbike ). You can submit an image of Vehicle in printed paper."),
-                      Text("2. Android Smartphone neededS"),
+                      Text("2. Android Smartphone needed."),
                       Text(
-                          "3. NID or Birth Certificate ( Original or photocopy"),
+                          "3. NID or Birth Certificate ( Original or photocopy."),
                       Text(
-                          "4. Your Nominee NID Card or Birth Certificate ( Original or photocopy"),
-                      Text("5. Driving license for Motorbike"),
-                      Text("6. Driving license for Motorbike"),
-                      Text("7. 1 passport size photo"),
+                          "4. Your Nominee NID Card or Birth Certificate (Original or photocopy)."),
+                      Text("5. Driving license for Motorbike."),
+                      Text("6. Utility bill Photocopy ( must be in 2-3 months)."),
+                      Text("7. 1 passport size photo."),
                       SizedBox(
-                        height: 50,
+                        height: 30,
                       ),
                       Text("Location : 1st building, OR Nijam Road Gec"),
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Text("Whatsapp: +880 1317 68 66 95"),
                       SizedBox(
-                        height: 10,
+                        height: 40,
                       ),
                     ],
                   ),
                   CustomTextButton(
                     onPressed: () {
-                      Get.to(dashBoardScreen());
+                      Get.to(PendingScreen());
                     },
                     color: AppColors.primaryColor,
                     text: 'Done',

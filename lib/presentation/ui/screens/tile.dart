@@ -103,7 +103,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
             children: [
               SizedBox(
                 height: 42,
-                width: 150,
+                width: 160,
                 child: ElevatedButton(
                   onPressed: () {
                     Get.to(OrderVerifyScreen());
@@ -113,7 +113,7 @@ class _ListViewScreenState extends State<ListViewScreen> {
               ),
               SizedBox(
                 height: 42,
-                width: 150,
+                width: 160,
                 child: ElevatedButton(
                   onPressed: () {
                     Get.to(OrderDetailsScreen());

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:prathinidhi_rider/presentation/ui/screens/dashboard_screen.dart';
 import 'package:prathinidhi_rider/presentation/ui/utility/app_color.dart';
 import 'package:prathinidhi_rider/presentation/ui/widgets/appbar.dart';
@@ -12,7 +13,9 @@ class DeliveryConfrimScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(icon: Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white,),
+      ontap: (){Navigator.pop(context);},
+      ),
       bottomNavigationBar: navbuttom(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 50),
@@ -28,8 +31,8 @@ class DeliveryConfrimScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 70,),
-                  Icon(Icons.done,size: 65,),
+                  SizedBox(height: 50,),
+                  Image.asset("assets/Mask_group.png",height: 60,width: 70,),
                   Text(" Congratulations!",style: Theme.of(context).textTheme.titleLarge,),
                   Text("Product Deliverd Successfully.", style: TextStyle(fontSize: 22,fontWeight: FontWeight.w700),),
                   SizedBox(height: 10,),

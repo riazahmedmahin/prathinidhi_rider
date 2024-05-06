@@ -27,7 +27,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(icon: Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white,),
+    ontap:(){  Navigator.of(context).pop();
+    },),
       body: Column(
         children: [
           SizedBox(height: 20,),

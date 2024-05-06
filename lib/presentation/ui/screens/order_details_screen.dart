@@ -17,7 +17,10 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(icon: Icon(Icons.arrow_back_ios_new_outlined),
+          ontap:(){  Navigator.of(context).pop();
+          }
+      ),
       body: Column(
         children: [
           Expanded(

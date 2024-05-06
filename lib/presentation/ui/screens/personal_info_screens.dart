@@ -106,7 +106,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                     onPressed: () {
                       Get.to(deliveryInfoScreen());
                     },
-                    text: 'Next',
+                    text: 'Next Step',
                     color: AppColors.primaryColor,
                     txtcolor: Colors.white,
                   )
