@@ -45,7 +45,6 @@ class DeliveryConfrimScreen extends StatelessWidget {
                 ],
               ),
             )
-
           ],
         ),
       ),
