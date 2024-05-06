@@ -68,23 +68,17 @@ class _ListViewScreenState extends State<ListViewScreen> {
                 },
                 child: Column(
                   children: [
-                    Text(
-                      'More order',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700,color: AppColors.primaryColor),
+                    Text('More order', style: TextStyle(fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.primaryColor),
                     ),
-                    Divider(
-                      thickness: 2,
-                      color: Colors.red,
-                      indent: 110,
-                      endIndent: 110,
+                    Divider(thickness: 2, color: Colors.red, indent: 110, endIndent: 110,
                     ),
                   ],
                 ),
               ),
             );
           }
-
           return buildListItem(index);
         },
       ),
@@ -111,12 +105,9 @@ class _ListViewScreenState extends State<ListViewScreen> {
                 width: 150,
                 child: ElevatedButton(
                   onPressed: () {
-                    // // Handle button press (e.g., update status)
-                    // setState(() {
-                    //   items[index]['status'] = 'Completed';
-                    // });
+                    Get.to(OrderDetailsScreen());
                   },
-                  child: Text('Complete'),
+                  child: Text('Accept'),
                 ),
               ),
               SizedBox(
@@ -124,15 +115,14 @@ class _ListViewScreenState extends State<ListViewScreen> {
                 width: 150,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(OrderDeliveryScreen());
-                    // Handle button press (e.g., navigate to details screen)
+                    Get.to(OrderDetailsScreen());
                   },
                   child: Text('Details'),
                 ),
               ),
             ],
           ),
-          Divider(), // Optional: Add a divider between items
+          Divider(),
         ],
       ),
     );
