@@ -41,10 +41,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               CustomTextButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
-                  );
+                 Get.to(LoginScreen());
                 },
                 color: Colors.grey.shade300,
                 text: 'Continue as a rider',
